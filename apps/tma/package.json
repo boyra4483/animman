@@ -1,5 +1,5 @@
 {
-  "name": "animan",
+  "name": "@animman/tma",
   "version": "1.0.0",
   "description": "",
   "homepage": "https://github.com/boyra4483/animan#readme",
@@ -14,6 +14,7 @@
   "author": "boyra",
   "type": "module",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "server": "webpack serve --open --env mode=development",
     "build": "webpack --env mode=production"
