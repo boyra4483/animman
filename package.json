@@ -1,0 +1,14 @@
+{
+  "name": "animman",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'run dev in specific package'",
+    "build": "echo 'run build in specific package'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.1"
+}
