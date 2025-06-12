@@ -9,6 +9,12 @@ importers:
 
   apps/bot:
     dependencies:
+      "@animman/config":
+        specifier: workspace:*
+        version: link:../../packages/config
+      "@animman/shared":
+        specifier: workspace:*
+        version: link:../../packages/shared
       axios:
         specifier: ^1.9.0
         version: 1.9.0
@@ -22,6 +28,12 @@ importers:
 
   apps/server:
     dependencies:
+      "@animman/config":
+        specifier: workspace:*
+        version: link:../../packages/config
+      "@animman/shared":
+        specifier: workspace:*
+        version: link:../../packages/shared
       axios:
         specifier: ^1.9.0
         version: 1.9.0
@@ -35,6 +47,12 @@ importers:
 
   apps/tma:
     dependencies:
+      "@animman/config":
+        specifier: workspace:*
+        version: link:../../packages/config
+      "@animman/shared":
+        specifier: workspace:*
+        version: link:../../packages/shared
       react:
         specifier: ^19.1.0
         version: 19.1.0
