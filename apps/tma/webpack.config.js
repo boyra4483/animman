@@ -26,7 +26,9 @@ export default (env) => {
       }),
       isDevMode
         ? []
-        : new MiniCssExtractPlugin({ filename: "index-[contenthash].css" })
+        : new MiniCssExtractPlugin({
+            filename: "styles/index-[contenthash].css",
+          })
     ),
     module: {
       rules: [
@@ -70,7 +72,17 @@ export default (env) => {
     },
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "./src/*"),
+        "@animman/tma/*": path.resolve(__dirname, "../../apps/tma/src/*"),
+        "@animman/server/*": path.resolve(__dirname, "../../apps/server/src/*"),
+        "@animman/bot/*": path.resolve(__dirname, "../../apps/bot/src/*"),
+        "@animman/config/*": path.resolve(
+          __dirname,
+          "../../packages/config/src/*"
+        ),
+        "@animman/shared/*": path.resolve(
+          __dirname,
+          "../../packages/shared/src/*"
+        ),
       },
       extensions: [".tsx", ".ts", ".js", "..."],
     },
