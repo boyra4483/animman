@@ -16,7 +16,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "server": "webpack serve --open --env mode=development",
+    "dev": "webpack serve --open --env mode=development",
     "build": "webpack --env mode=production"
   },
   "devDependencies": {
