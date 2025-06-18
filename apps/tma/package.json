@@ -17,8 +17,7 @@
   "private": true,
   "scripts": {
     "dev": "webpack serve --open --env mode=development",
-    "build": "webpack --env mode=production",
-    "start": "echo 'Static site, nothing to start.'"
+    "build": "webpack --env mode=production"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
