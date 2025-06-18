@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router";
-import rootRout from "../routes/root";
+import rootRout from "@animman/tma/app/routes/root";
 
 const router = createBrowserRouter([rootRout]);
 
