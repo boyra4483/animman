@@ -21,6 +21,7 @@
     "start": "echo 'Static site, nothing to start.'"
   },
   "devDependencies": {
+    "@types/express": "^5.0.3",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
     "css-loader": "^7.1.2",
@@ -40,6 +41,7 @@
     "@animman/config": "workspace:*",
     "@animman/shared": "workspace:*",
     "@twa-dev/sdk": "^8.0.2",
+    "express": "^5.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   }
