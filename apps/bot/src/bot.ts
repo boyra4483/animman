@@ -1,3 +1,7 @@
 import { Bot } from "grammy";
+import { BOT_TOKEN } from "@animman/bot/config";
+import { startCommand } from "@animman/bot/commands/start";
 
-export default new Bot("8173274156:AAGJWueLO-Sa5F2K7Uf8gWG6QJ4P6UWKIbk");
+export const bot = new Bot(BOT_TOKEN);
+
+bot.command("start", startCommand);
