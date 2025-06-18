@@ -1,3 +1,6 @@
+import { RouterProvider } from "react-router";
+import router from "@animman/tma/app/router/router";
+
 export default function App() {
-  return <h1>WEBPACK-REACT-TS</h1>;
+  return <RouterProvider router={router} />;
 }
