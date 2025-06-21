@@ -1,7 +1,9 @@
 @use "./reset.css";
 @use "~@animman/tma/shared/font-declarations/montserrat/montserrat";
+@use "~@animman/tma/shared/styles/vars/colors";
 
 body {
+  background-color: colors.$primary-soft-dark;
   font: 400 0.75rem / 1.25 "montserrat";
   color: #ffffff;
 }
