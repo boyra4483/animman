@@ -89,6 +89,7 @@ export default (env) => {
     devtool: "inline-source-map",
     devServer: {
       static: "./dist",
+      historyApiFallback: true,
     },
     stats: {
       errorDetails: true,
