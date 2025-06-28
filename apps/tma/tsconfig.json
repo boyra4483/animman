@@ -2,15 +2,15 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./dist/",
-    "baseUrl": "../../",
-    "plugins": [
-      {
-        "name": "typescript-plugin-css-modules",
-        "options": {
-          "customMatcher": "\\.((c|le|sa|sc)ss|styl)$"
-        }
-      }
-    ]
+    "baseUrl": "../../"
+    // "plugins": [
+    //   {
+    //     "name": "typescript-plugin-css-modules",
+    //     "options": {
+    //       "customMatcher": "\\.((c|le|sa|sc)ss|styl)$"
+    //     }
+    //   }
+    // ]
   },
-  "include": ["src"]
+  "include": ["src", "../../packages/shared/src/types/media.d.ts"]
 }
