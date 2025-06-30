@@ -1,0 +1,27 @@
+@use "~@animman/tma/shared/styles/vars/colors";
+
+.progress {
+  display: flex;
+  gap: 0.75rem;
+
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+.step {
+  width: 0.625rem;
+  height: 0.625rem;
+
+  background-color: colors.$primary-blue;
+  opacity: 0.4;
+
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 1s, width 1s;
+  &.active {
+    opacity: 1;
+    width: 2rem;
+  }
+}
