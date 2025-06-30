@@ -2,11 +2,7 @@ import styles from "@animman/tma/widgets/onboarding-slider/ui/onboardingSlides.s
 import onboardingImg from "@animman/tma/shared/assets/images/pictures/onboarding.jpg";
 import { Images } from "@animman/tma/shared/types/image";
 
-interface OnboardingSlidesProps {
-  slide: number;
-}
-
-export default function OnboardingSlides({ slide }: OnboardingSlidesProps) {
+export default function OnboardingSlides({ slide }: { slide: number }) {
   const images: Images = [
     {
       src: onboardingImg,
