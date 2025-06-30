@@ -14,8 +14,8 @@ export default function ButtonProgress({ step }: { step: number }) {
             d="M 80 7 h 43 a 20 20 0 0 1 20 20 v 46"
             fill="none"
             stroke="#00cfe8"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
         </svg>
       );
@@ -32,24 +32,24 @@ export default function ButtonProgress({ step }: { step: number }) {
             d="M 80 7 h 43 a 20 20 0 0 1 20 20 v 46"
             fill="none"
             stroke="#00cfe8"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             style={{ transform: "rotate(90deg)" }}
             d="M 80 -143 h 43 a 20 20 0 0 1 20 20 v 46"
             fill="none"
             stroke="#00cfe8"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             style={{ transform: "rotate(180deg)" }}
             d="M -75 -143 h 48 a 20 20 0 0 1 20 20 v 46"
             fill="none"
             stroke="#00cfe8"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
         </svg>
       );
@@ -66,32 +66,32 @@ export default function ButtonProgress({ step }: { step: number }) {
             d="M 80 7 h 43 a 20 20 0 0 1 20 20 v 46"
             fill="none"
             stroke="#00cfe8"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             style={{ transform: "rotate(90deg)" }}
             d="M 80 -143 h 43 a 20 20 0 0 1 20 20 v 46"
             fill="none"
             stroke="#00cfe8"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             style={{ transform: "rotate(180deg)" }}
             d="M -75 -143 h 48 a 20 20 0 0 1 20 20 v 46"
             fill="none"
             stroke="#00cfe8"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
           <path
             style={{ transform: "rotate(270deg)" }}
             d="M -70 7 h 43 a 20 20 0 0 1 20 20 v 46"
             fill="none"
             stroke="#00cfe8"
-            stroke-width="4"
-            stroke-linecap="round"
+            strokeWidth="4"
+            strokeLinecap="round"
           />
         </svg>
       );
