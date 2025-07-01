@@ -20,7 +20,7 @@ export default function OnboardingSlider() {
   }
 
   return (
-    <div>
+    <>
       <OnboardingSlides slide={progress} />
       <OnboardingText step={progress} />
       <section className={styles["interactive"]}>
@@ -29,6 +29,6 @@ export default function OnboardingSlider() {
           <ButtonProgress step={progress} />
         </OnboardingButton>
       </section>
-    </div>
+    </>
   );
 }
