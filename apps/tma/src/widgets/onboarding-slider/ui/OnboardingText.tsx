@@ -2,19 +2,17 @@ import styles from "@animman/tma/widgets/onboarding-slider/ui/onboardingText.scs
 import { Text } from "@animman/tma/widgets/onboarding-slider/model/text";
 const texts: Text[] = [
   {
-    title: "The biggest international and local film streaming",
+    title: "Добро пожаловать в Animman! ",
     description:
-      "Semper in cursus magna et eu varius nunc adipiscing. Elementum justo,laoreet id sem semper parturient.",
+      "Здесь ты найдёшь всё об аниме: от описаний и рейтингов до новых релизов.",
   },
   {
-    title: "Offers ad-free viewing of high quality",
-    description:
-      "Semper in cursus magna et eu varius nunc adipiscing. Elementum justo,laoreet id sem semper parturient.",
+    title: "Animman – твой гид по миру аниме",
+    description: "Ищи, сохраняй и узнавай больше о своих любимых тайтлах.",
   },
   {
-    title: "Our service brings together your favorite series",
-    description:
-      "Semper in cursus magna et eu varius nunc adipiscing. Elementum justo,laoreet id sem semper parturient.",
+    title: "Найди своё новое любимое аниме уже сегодня",
+    description: "Твои любимые тайтлы и свежие релизы – в одном месте.",
   },
 ];
 
