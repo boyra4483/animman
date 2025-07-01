@@ -1,7 +1,7 @@
 import { RouteObject } from "react-router";
-import OnboardingSlider from "@animman/tma/widgets/onboarding-slider/ui/OnboardingSlider";
+import Onboarding from "@animman/tma/pages/onboarding/ui/Onboarding";
 
 export const onboardingRoute: RouteObject = {
   path: "/onboarding",
-  element: <OnboardingSlider />,
+  element: <Onboarding />,
 };
