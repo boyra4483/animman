@@ -5,19 +5,19 @@ const images: Images = [
   {
     src: onboardingImg,
     alt: "woman with phone",
-    width: 375,
+    width: 425,
     height: 421,
   },
   {
     src: onboardingImg,
     alt: "woman with phone",
-    width: 375,
+    width: 425,
     height: 421,
   },
   {
     src: onboardingImg,
     alt: "woman with phone",
-    width: 375,
+    width: 425,
     height: 421,
   },
 ];
