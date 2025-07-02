@@ -1,9 +1,9 @@
 import styles from "@animman/tma/widgets/onboarding-slider/ui/onboardingSlider.scss";
-import OnboardingSlides from "./OnboardingSlides";
-import OnboardingText from "./OnboardingText";
-import OnboardingButton from "./OnboardingButton";
-import ButtonProgress from "./ButtonProgress";
-import OnboardingProgress from "./OnboardingProgress";
+import OnboardingSlides from "@animman/tma/widgets/onboarding-slider/ui/OnboardingSlides";
+import OnboardingText from "@animman/tma/widgets/onboarding-slider/ui/OnboardingText";
+import OnboardingButton from "@animman/tma/widgets/onboarding-slider/ui/OnboardingButton";
+import ButtonProgress from "@animman/tma/widgets/onboarding-slider/ui/ButtonProgress";
+import OnboardingProgress from "@animman/tma/widgets/onboarding-slider/ui/OnboardingProgress";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
