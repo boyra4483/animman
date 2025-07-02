@@ -1,4 +1,4 @@
-import styles from "@animman/tma/widgets/onboarding-slider/ui/ButtonProgress.scss";
+import styles from "@animman/tma/widgets/onboarding-slider/ui/buttonProgress.scss";
 
 export default function ButtonProgress({ step }: { step: number }) {
   switch (step) {
