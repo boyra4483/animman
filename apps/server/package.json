@@ -16,6 +16,7 @@
     "@animman/config": "workspace:*",
     "@animman/shared": "workspace:*",
     "@prisma/client": "^6.11.0",
+    "@telegram-apps/init-data-node": "^2.0.10",
     "axios": "^1.9.0",
     "cookie-parser": "^1.4.7",
     "express": "^5.1.0",
