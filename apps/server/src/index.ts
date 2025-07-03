@@ -7,6 +7,9 @@ import cookieParser from "cookie-parser";
 const app = e();
 const PORT = process.env.PORT || 3030;
 
+app.use(e.json());
+app.use(cookieParser());
+
 app.get("/", async (req, res) => {
   const users = await prisma.user.findMany();
   res.json(users);
