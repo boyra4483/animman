@@ -1,14 +1,14 @@
 import e from "express";
 import prisma from "@animman/server/prisma";
-import { isValid, parse } from "@telegram-apps/init-data-node";
-import jwt from "jsonwebtoken";
 import cookieParser from "cookie-parser";
+import router from "@animman/server/router";
 
 const app = e();
 const PORT = process.env.PORT || 3030;
 
 app.use(e.json());
 app.use(cookieParser());
+app.use("user", router);
 
 app.get("/", async (req, res) => {
   const users = await prisma.user.findMany();
