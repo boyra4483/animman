@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { parse, isValid } from "@telegram-apps/init-data-node";
 import jwt from "jsonwebtoken";
 import prisma from "@animman/server/prisma";
+import InitDataError from "@animman/server/errors/initDataError";
 
 class UserController {
   async auth(req: Request, res: Response) {
@@ -51,14 +52,10 @@ class UserController {
     }
   }
   initDataVerify(initData: string | undefined) {
-    if (initData === undefined) {
-      throw new Error(
-        "you did not connect to the animman using Telegram. Please, use animman via telegram"
-      );
+    if (initData === undefined || !isValid(initData, process.env.JWT_SECRET!)) {
+      throw new InitDataError();
     }
-    if (!isValid(initData, process.env.JWT_SECRET!)) {
-      throw new Error("invalid initData");
-    }
+
     return parse(initData);
   }
 }
