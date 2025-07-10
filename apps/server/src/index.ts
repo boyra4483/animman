@@ -1,5 +1,4 @@
 import e from "express";
-import prisma from "@animman/server/prisma";
 import cookieParser from "cookie-parser";
 import router from "@animman/server/router";
 
