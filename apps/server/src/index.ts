@@ -10,11 +10,6 @@ app.use(e.json());
 app.use(cookieParser());
 app.use("/user", router);
 
-app.get("/", async (req, res) => {
-	const users = await prisma.user.findMany();
-	res.json(users);
-});
-
 app.listen(PORT, () => {
 	console.log(`Server running on http://localhost:${PORT}`);
 });
