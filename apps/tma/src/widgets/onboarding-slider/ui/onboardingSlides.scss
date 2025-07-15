@@ -1,5 +1,27 @@
+.img-wrapper {
+	max-height: 100%;
+	max-width: 425px;
+	margin-block-end: 2.938rem;
+
+	@media (max-height: 45.938rem) {
+		margin-block-end: 2rem;
+	}
+
+	@media (max-height: 45rem) {
+		margin-block-end: 1.5rem;
+		height: 440px;
+	}
+
+	@media (max-height: 42.188rem) {
+		height: 400px;
+	}
+	@media (max-height: 39.688rem) {
+		height: 380px;
+	}
+}
+
 .img {
-  width: 425px;
-  max-width: 100%;
-  margin-block-end: 2.938rem;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
