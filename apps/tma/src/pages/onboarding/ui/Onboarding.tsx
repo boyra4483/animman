@@ -1,8 +1,10 @@
 import OnboardingSlider from "@animman/tma/widgets/onboarding-slider";
+import styles from "@animman/tma/pages/onboarding/ui/onboarding.scss";
+
 export default function Onboarding() {
-  return (
-    <div>
-      <OnboardingSlider />
-    </div>
-  );
+	return (
+		<main className={styles.onboarding}>
+			<OnboardingSlider />
+		</main>
+	);
 }
