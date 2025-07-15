@@ -26,4 +26,8 @@
 	font-size: 0.875rem;
 	color: colors.$text-grey;
 	margin-block-end: 2.938rem;
+
+	@media (max-height: 46.875rem) {
+		margin-block-end: 2rem;
+	}
 }
