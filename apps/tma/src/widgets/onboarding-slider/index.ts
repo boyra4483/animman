@@ -1,2 +1,2 @@
-import OnboardingSlider from "./ui/OnboardingSlider";
+import OnboardingSlider from "./ui/Slider";
 export default OnboardingSlider;
