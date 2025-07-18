@@ -1,2 +1,2 @@
-import OnboardingSlider from "./ui/Slider";
-export default OnboardingSlider;
+import Slider from "./ui/Slider";
+export default Slider;
