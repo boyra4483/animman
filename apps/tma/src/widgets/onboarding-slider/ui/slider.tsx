@@ -1,13 +1,13 @@
 import styles from "@animman/tma/widgets/onboarding-slider/ui/slider.scss";
-import OnboardingSlides from "@animman/tma/widgets/onboarding-slider/ui/OnboardingImage";
+import OnboardingImage from "@animman/tma/widgets/onboarding-slider/ui/OnboardingImage";
 import OnboardingText from "@animman/tma/widgets/onboarding-slider/ui/OnboardingText";
-import OnboardingButton from "@animman/tma/widgets/onboarding-slider/ui/Button";
+import Button from "@animman/tma/widgets/onboarding-slider/ui/Button";
 import ButtonProgress from "@animman/tma/widgets/onboarding-slider/ui/ButtonProgress";
-import OnboardingProgress from "@animman/tma/widgets/onboarding-slider/ui/Progress";
+import Progress from "@animman/tma/widgets/onboarding-slider/ui/Progress";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
-export default function OnboardingSlider() {
+export default function Slider() {
 	const [progress, setProgress] = useState<number>(0);
 	const navigate = useNavigate();
 
@@ -21,13 +21,13 @@ export default function OnboardingSlider() {
 
 	return (
 		<>
-			<OnboardingSlides slide={progress} />
+			<OnboardingImage slide={progress} />
 			<OnboardingText step={progress} />
 			<section className={styles["interactive"]}>
-				<OnboardingProgress step={progress} quantity={3} />
-				<OnboardingButton onClick={handleClick}>
+				<Progress step={progress} quantity={3} />
+				<Button onClick={handleClick}>
 					<ButtonProgress step={progress} />
-				</OnboardingButton>
+				</Button>
 			</section>
 		</>
 	);

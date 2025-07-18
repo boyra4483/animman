@@ -5,10 +5,7 @@ interface OnboardingProgressProps {
 	quantity: number;
 }
 
-export default function OnboardingProgress({
-	step,
-	quantity
-}: OnboardingProgressProps) {
+export default function Progress({ step, quantity }: OnboardingProgressProps) {
 	return (
 		<ul className={styles["progress"]}>{...getProgress(quantity, step)}</ul>
 	);

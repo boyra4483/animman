@@ -6,10 +6,7 @@ interface OnboardingButtonProps {
 	onClick: () => void;
 }
 
-export default function OnboardingButton({
-	children,
-	onClick
-}: OnboardingButtonProps) {
+export default function Button({ children, onClick }: OnboardingButtonProps) {
 	return (
 		<div className={styles["button-wrapper"]}>
 			{children}

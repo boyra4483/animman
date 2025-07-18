@@ -22,7 +22,7 @@ const images: Images = [
 	}
 ];
 
-export default function OnboardingSlides({ slide }: { slide: number }) {
+export default function OnboardingImage({ slide }: { slide: number }) {
 	return (
 		<div className={styles["img-wrapper"]}>
 			<img
