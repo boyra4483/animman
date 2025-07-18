@@ -1,21 +1,21 @@
-import styles from "@animman/tma/widgets/onboarding-slider/ui/onboardingButton.scss";
+import styles from "@animman/tma/widgets/onboarding-slider/ui/button.scss";
 import arrow from "@animman/tma/shared/assets/images/icons/arrow.svg";
 
 interface OnboardingButtonProps {
-  children: React.ReactElement;
-  onClick: () => void;
+	children: React.ReactElement;
+	onClick: () => void;
 }
 
 export default function OnboardingButton({
-  children,
-  onClick,
+	children,
+	onClick
 }: OnboardingButtonProps) {
-  return (
-    <div className={styles["button-wrapper"]}>
-      {children}
-      <div className={styles.btn} onClick={onClick}>
-        <img className={styles["arrow"]} src={arrow} alt="arrow" />
-      </div>
-    </div>
-  );
+	return (
+		<div className={styles["button-wrapper"]}>
+			{children}
+			<div className={styles.btn} onClick={onClick}>
+				<img className={styles["arrow"]} src={arrow} alt="arrow" />
+			</div>
+		</div>
+	);
 }
