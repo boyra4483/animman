@@ -59,7 +59,9 @@ class UserController {
 		return parse(initData);
 	}
 	isAuth(req: Request, res: Response) {
-		const { initData } = req.body as { initData: string };
+		const {
+			user: { initData }
+		} = req.body as { user: { initData: string } };
 
 		try {
 			const userTgData = this.initDataVerify(initData);
