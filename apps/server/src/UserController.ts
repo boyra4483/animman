@@ -73,12 +73,16 @@ class UserController {
 
 			if (userDB === null) {
 				res.status(401).json({
-					user: userDB
+					user: {
+						data: userDB
+					}
 				});
 				return;
 			}
 			res.status(200).json({
-				user: userDB
+				user: {
+					data: userDB
+				}
 			});
 		} catch (err) {
 			console.log(err);
