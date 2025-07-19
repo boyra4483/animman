@@ -70,7 +70,7 @@ class UserController {
 					telegramId: userTgData.user?.id.toString()
 				}
 			});
-
+			console.log(userDB);
 			if (userDB === null) {
 				res.status(401).json({
 					user: {
