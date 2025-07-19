@@ -3,7 +3,7 @@ import OnboardingImage from "@animman/tma/widgets/onboarding-slider/ui/Onboardin
 import OnboardingText from "@animman/tma/widgets/onboarding-slider/ui/OnboardingText";
 import Button from "@animman/tma/widgets/onboarding-slider/ui/Button";
 import ButtonProgress from "@animman/tma/widgets/onboarding-slider/ui/ButtonProgress";
-import Progress from "@animman/tma/widgets/onboarding-slider/ui/Progress";
+import Progress from "@animman/tma/widgets/onboarding-slider/ui/progress";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 

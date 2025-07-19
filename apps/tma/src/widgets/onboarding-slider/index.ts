@@ -1,2 +1,2 @@
-import Slider from "@animman/tma/widgets/onboarding-slider/ui/Slider";
+import Slider from "@animman/tma/widgets/onboarding-slider/ui/slider";
 export default Slider;
