@@ -59,7 +59,9 @@ class UserController {
 		return parse(initData);
 	}
 	isAuth(req: Request, res: Response) {
-		const { initData } = req.body as { initData: string };
+		const {
+			user: { initData }
+		} = req.body as { user: { initData: string } };
 
 		try {
 			const userTgData = this.initDataVerify(initData);
@@ -71,12 +73,16 @@ class UserController {
 
 			if (userDB === null) {
 				res.status(401).json({
-					user: userDB
+					user: {
+						data: userDB
+					}
 				});
 				return;
 			}
 			res.status(200).json({
-				user: userDB
+				user: {
+					data: userDB
+				}
 			});
 		} catch (err) {
 			console.log(err);
