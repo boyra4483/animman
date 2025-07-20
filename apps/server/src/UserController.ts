@@ -45,10 +45,11 @@ class UserController {
 				user
 			});
 		} catch (error) {
-			console.log(error);
-			res.status(400).json({
-				error: "Invalid initData"
-			});
+			if (error instanceof InitDataError) {
+				res.status(400).json({
+					error: `${error.name}: ${error.message}:`
+				});
+			}
 		}
 	}
 	initDataVerify(initData: string | undefined) {
