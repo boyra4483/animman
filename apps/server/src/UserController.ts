@@ -71,19 +71,17 @@ class UserController {
 					telegramId: userTgData.user?.id.toString()
 				}
 			});
+
 			console.log(userDB);
+
 			if (userDB === null) {
 				res.status(401).json({
-					user: {
-						data: userDB
-					}
+					userData: userDB
 				});
 				return;
 			}
 			res.status(200).json({
-				user: {
-					data: userDB
-				}
+				userData: userDB
 			});
 		} catch (err) {
 			if (err instanceof InitDataError) {
@@ -91,7 +89,6 @@ class UserController {
 					error: `${err.name}: ${err.message}`
 				});
 			}
-			console.log(err);
 		}
 	}
 }
