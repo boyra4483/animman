@@ -86,10 +86,12 @@ class UserController {
 				}
 			});
 		} catch (err) {
+			if (err instanceof InitDataError) {
+				res.status(400).json({
+					error: `${err.name}: ${err.message}`
+				});
+			}
 			console.log(err);
-			res.status(400).json({
-				error: "Invalid initData"
-			});
 		}
 	}
 }
