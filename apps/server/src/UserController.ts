@@ -54,7 +54,7 @@ class UserController {
 	}
 	initDataVerify(initData: string | undefined) {
 		if (initData === undefined || !isValid(initData, process.env.JWT_SECRET!)) {
-			throw new InitDataError();
+			throw new InitDataError("Invalid initData");
 		}
 
 		return parse(initData);

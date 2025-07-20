@@ -1,9 +1,9 @@
 class InitDataError extends Error {
-  constructor() {
-    super();
-    this.name = InitDataError.name;
-    this.message = "invalid initData";
-  }
+	constructor(message: string) {
+		super();
+		this.name = InitDataError.name;
+		this.message = message;
+	}
 }
 
 export default InitDataError;
