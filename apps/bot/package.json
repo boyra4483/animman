@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"private": true,
 	"scripts": {
-		"dev": "ts-node --require tsconfig-paths/register src/index.ts",
+		"dev": "tsnd --respawn -r tsconfig-paths/register src/index.ts",
 		"build": "tsc",
 		"start": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/index.js"
 	},
