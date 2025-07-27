@@ -9,7 +9,10 @@ const isAtuh: AxiosRequestConfig = {
 			initData: tg.initData
 		}
 	},
-	withCredentials: true
+	withCredentials: true,
+	headers: {
+		"Content-Type": "application/json"
+	}
 };
 
 export default isAtuh;
