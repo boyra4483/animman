@@ -107,6 +107,9 @@ importers:
       '@twa-dev/sdk':
         specifier: ^8.0.2
         version: 8.0.2(react@19.1.0)
+      axios:
+        specifier: ^1.9.0
+        version: 1.9.0
       react:
         specifier: ^19.1.0
         version: 19.1.0
