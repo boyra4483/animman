@@ -1,18 +1,13 @@
 import tg from "@twa-dev/sdk";
-import { redirect } from "react-router";
+import { data, redirect } from "react-router";
+import isAuth from "@animman/tma/shared/config/axios/config/isAuth";
+import axios from "axios";
 
 export default async function rootLoader() {
 	console.log(tg.initData);
-	const res = await fetch("http://localhost:3030/user/isAuth", {
-		method: "POST",
-		body: JSON.stringify({
-			user: {
-				initData: tg.initData
-			}
-		})
-	});
+	const res = await axios(isAuth);
 
-	if (res.ok) {
+	if (res.statusText == "OK") {
 		redirect("/auth");
 	} else {
 		redirect("/onboarding");
