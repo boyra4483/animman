@@ -7,15 +7,16 @@ import "dotenv/config";
 const app = e();
 const PORT = process.env.PORT || 3030;
 
-app.use(e.json());
-app.use(cookieParser());
-app.use("/user", router);
 app.use(
 	cors({
 		origin: process.env.TMA_URL,
 		credentials: true
 	})
 );
+
+app.use(e.json());
+app.use(cookieParser());
+app.use("/user", router);
 
 app.listen(PORT, () => {
 	console.log(`Server running on http://localhost:${PORT}`);
