@@ -107,9 +107,6 @@ importers:
       '@twa-dev/sdk':
         specifier: ^8.0.2
         version: 8.0.2(react@19.1.0)
-      dotenv:
-        specifier: ^16.5.0
-        version: 16.5.0
       react:
         specifier: ^19.1.0
         version: 19.1.0
