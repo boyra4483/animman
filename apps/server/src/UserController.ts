@@ -9,7 +9,7 @@ class UserController {
 		const { initData } = req.body as { initData: string };
 
 		try {
-			const userTgData = this.initDataVerify(initData);
+			const userTgData = initDataVerify(initData);
 			const user = await prisma.user.upsert({
 				where: { telegramId: userTgData.user?.id.toString() },
 				update: {
@@ -52,20 +52,14 @@ class UserController {
 			}
 		}
 	}
-	initDataVerify(initData: string | undefined) {
-		if (initData === undefined || !isValid(initData, process.env.JWT_SECRET!)) {
-			throw new InitDataError("Invalid initData");
-		}
 
-		return parse(initData);
-	}
 	isAuth(req: Request, res: Response) {
 		const {
 			user: { initData }
 		} = req.body as { user: { initData: string } };
 
 		try {
-			const userTgData = this.initDataVerify(initData);
+			const userTgData = initDataVerify(initData);
 			const userDB = prisma.user.findFirst({
 				where: {
 					telegramId: userTgData.user?.id.toString()
@@ -91,6 +85,14 @@ class UserController {
 			}
 		}
 	}
+}
+
+function initDataVerify(initData: string | undefined) {
+	if (initData === undefined || !isValid(initData, process.env.JWT_SECRET!)) {
+		throw new InitDataError("Invalid initData");
+	}
+
+	return parse(initData);
 }
 
 export default new UserController();
