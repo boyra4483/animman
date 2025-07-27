@@ -8,7 +8,8 @@ const isAtuh: AxiosRequestConfig = {
 		user: {
 			initData: tg.initData
 		}
-	}
+	},
+	withCredentials: true
 };
 
 export default isAtuh;
