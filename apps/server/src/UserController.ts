@@ -88,7 +88,7 @@ class UserController {
 }
 
 function initDataVerify(initData: string | undefined) {
-	if (initData === undefined || !isValid(initData, process.env.JWT_SECRET!)) {
+	if (initData === undefined || !isValid(initData, process.env.BOT_TOKEN!)) {
 		throw new InitDataError("Invalid initData");
 	}
 
