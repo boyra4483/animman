@@ -54,9 +54,7 @@ class UserController {
 	}
 
 	async isAuth(req: Request, res: Response) {
-		const {
-			user: { initData }
-		} = req.body as { user: { initData: string } };
+		const { initData } = req.body as { initData: string };
 
 		try {
 			const userTgData = initDataVerify(initData);
