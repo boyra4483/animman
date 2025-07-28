@@ -1,5 +1,5 @@
 import { type RouteObject } from "react-router";
-import rootLoader from "../route-loaders/rootLoader";
+import rootLoader from "@animman/tma/app/route-loaders/rootLoader";
 
 const rootRout: RouteObject = {
 	path: "/",
