@@ -53,14 +53,14 @@ class UserController {
 		}
 	}
 
-	isAuth(req: Request, res: Response) {
+	async isAuth(req: Request, res: Response) {
 		const {
 			user: { initData }
 		} = req.body as { user: { initData: string } };
 
 		try {
 			const userTgData = initDataVerify(initData);
-			const userDB = prisma.user.findFirst({
+			const userDB = await prisma.user.findUnique({
 				where: {
 					telegramId: userTgData.user?.id.toString()
 				}
