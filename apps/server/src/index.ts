@@ -5,7 +5,7 @@ import cors from "cors";
 import "dotenv/config";
 
 const app = e();
-const PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT;
 
 app.use(
 	cors({
