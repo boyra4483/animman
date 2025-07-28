@@ -76,7 +76,7 @@ class UserController {
 				userData: userDB
 			});
 		} catch (err) {
-			if (err instanceof InitDataError) {
+			if (err instanceof Error) {
 				res.status(400).json({
 					error: `${err.name}: ${err.message}`
 				});
