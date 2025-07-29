@@ -6,7 +6,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "ts-node -r tsconfig-paths/register src/index.ts",
-		"build": "prisma generate && tsc",
+		"build": "prisma generate --no-engine && tsc",
 		"start": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/index.js"
 	},
 	"keywords": [],
