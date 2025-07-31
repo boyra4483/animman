@@ -1,8 +1,9 @@
 import { Request, Response } from "express";
-import { parse, isValid } from "@telegram-apps/init-data-node";
+import { parse, isValid, type InitData } from "@telegram-apps/init-data-node";
 import jwt from "jsonwebtoken";
 import prisma from "@animman/server/prisma";
 import InitDataError from "@animman/server/errors/initDataError";
+import { User } from "@prisma/client";
 
 class UserController {
 	async auth(req: Request, res: Response) {
@@ -55,26 +56,29 @@ class UserController {
 
 	async isAuth(req: Request, res: Response) {
 		const { initData } = req.body as { initData: string };
+		let userTgData: InitData | undefined;
+		let userDB: User | null;
 
 		try {
-			const userTgData = initDataVerify(initData);
-			const userDB = await prisma.user.findUnique({
+			userTgData = initDataVerify(initData);
+			userDB = await prisma.user.findUnique({
 				where: {
 					telegramId: userTgData.user?.id.toString()
 				}
 			});
-
-			console.log(userDB);
-			res.status(200).json({
-				userData: userDB
-			});
 		} catch (err) {
-			if (err instanceof Error) {
-				res.status(400).json({
-					error: `${err.name}: ${err.message}`
-				});
-			}
+			err instanceof Error
+				? res.status(400).json({
+						error: `${err.name}: ${err.message}`
+				  })
+				: null;
+			return;
 		}
+
+		console.log(userDB);
+		res.status(200).json({
+			userData: userDB
+		});
 	}
 }
 
