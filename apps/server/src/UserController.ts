@@ -8,10 +8,12 @@ import { User } from "@prisma/client";
 class UserController {
 	async auth(req: Request, res: Response) {
 		const { initData } = req.body as { initData: string };
+		let userTgData: InitData | undefined;
+		let user: User | null;
 
 		try {
-			const userTgData = initDataVerify(initData);
-			const user = await prisma.user.upsert({
+			userTgData = initDataVerify(initData);
+			user = await prisma.user.upsert({
 				where: { telegramId: userTgData.user?.id.toString() },
 				update: {
 					username: userTgData.user?.username,
@@ -27,31 +29,32 @@ class UserController {
 					photoUrl: userTgData.user?.photo_url
 				}
 			});
-
-			const token = jwt.sign(
-				{
-					userId: user.id
-				},
-				process.env.JWT_SECRET!,
-				{ expiresIn: "7d" }
-			);
-
-			res.cookie("token", token, {
-				httpOnly: true,
-				sameSite: "strict",
-				secure: process.env.NODE_ENV === "production"
-			});
-			res.json({
-				message: "Authorized",
-				user
-			});
-		} catch (error) {
-			if (error instanceof Error) {
-				res.status(400).json({
-					error: `${error.name}: ${error.message}:`
-				});
-			}
+		} catch (err) {
+			err instanceof Error
+				? res.status(400).json({
+						error: `${err.name}: ${err.message}`
+				  })
+				: null;
+			return;
 		}
+
+		const token = jwt.sign(
+			{
+				userId: user.id
+			},
+			process.env.JWT_SECRET!,
+			{ expiresIn: "7d" }
+		);
+
+		res.cookie("token", token, {
+			httpOnly: true,
+			sameSite: "strict",
+			secure: process.env.NODE_ENV === "production"
+		});
+		res.json({
+			message: "Authorized",
+			user
+		});
 	}
 
 	async isAuth(req: Request, res: Response) {
