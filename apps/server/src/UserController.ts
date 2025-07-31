@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 import prisma from "@animman/server/prisma";
 import InitDataError from "@animman/server/errors/initDataError";
 import { User } from "@prisma/client";
+import "dotenv/config";
 
 class UserController {
 	async auth(req: Request, res: Response) {
