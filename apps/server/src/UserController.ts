@@ -45,7 +45,7 @@ class UserController {
 				user
 			});
 		} catch (error) {
-			if (error instanceof InitDataError) {
+			if (error instanceof Error) {
 				res.status(400).json({
 					error: `${error.name}: ${error.message}:`
 				});
