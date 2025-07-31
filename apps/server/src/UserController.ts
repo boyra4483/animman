@@ -45,7 +45,7 @@ class UserController {
 				user
 			});
 		} catch (error) {
-			if (error instanceof InitDataError) {
+			if (error instanceof Error) {
 				res.status(400).json({
 					error: `${error.name}: ${error.message}:`
 				});
@@ -53,32 +53,23 @@ class UserController {
 		}
 	}
 
-	isAuth(req: Request, res: Response) {
-		const {
-			user: { initData }
-		} = req.body as { user: { initData: string } };
+	async isAuth(req: Request, res: Response) {
+		const { initData } = req.body as { initData: string };
 
 		try {
 			const userTgData = initDataVerify(initData);
-			const userDB = prisma.user.findFirst({
+			const userDB = await prisma.user.findUnique({
 				where: {
 					telegramId: userTgData.user?.id.toString()
 				}
 			});
 
 			console.log(userDB);
-
-			if (userDB === null) {
-				res.status(401).json({
-					userData: userDB
-				});
-				return;
-			}
 			res.status(200).json({
 				userData: userDB
 			});
 		} catch (err) {
-			if (err instanceof InitDataError) {
+			if (err instanceof Error) {
 				res.status(400).json({
 					error: `${err.name}: ${err.message}`
 				});
@@ -88,7 +79,7 @@ class UserController {
 }
 
 function initDataVerify(initData: string | undefined) {
-	if (initData === undefined || !isValid(initData, process.env.JWT_SECRET!)) {
+	if (initData === undefined || !isValid(initData, process.env.BOT_TOKEN!)) {
 		throw new InitDataError("Invalid initData");
 	}
 

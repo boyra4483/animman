@@ -6,7 +6,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "ts-node -r tsconfig-paths/register src/index.ts",
-		"build": "prisma generate && tsc",
+		"build": "prisma generate --no-engine && tsc",
 		"start": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/index.js"
 	},
 	"keywords": [],
@@ -17,6 +17,7 @@
 		"@animman/config": "workspace:*",
 		"@animman/shared": "workspace:*",
 		"@prisma/client": "^6.12.0",
+		"@prisma/extension-accelerate": "^2.0.2",
 		"@telegram-apps/init-data-node": "^2.0.10",
 		"axios": "^1.9.0",
 		"cookie-parser": "^1.4.7",
