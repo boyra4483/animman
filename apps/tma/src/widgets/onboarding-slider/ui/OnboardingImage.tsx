@@ -1,4 +1,4 @@
-import styles from "@animman/tma/widgets/onboarding-slider/ui/onboardingImage.scss";
+import styles from "@animman/tma/widgets/onboarding-slider/ui/onboardingImage.module.scss";
 import onboardingImg from "@animman/tma/shared/assets/images/pictures/onboarding.jpg";
 import { Images } from "@animman/tma/shared/types/image";
 const images: Images = [

@@ -1,4 +1,4 @@
-import styles from "@animman/tma/widgets/onboarding-slider/ui/onboardingText.scss";
+import styles from "@animman/tma/widgets/onboarding-slider/ui/onboardingText.module.scss";
 import { Text } from "@animman/tma/widgets/onboarding-slider/model/text";
 const texts: Text[] = [
 	{

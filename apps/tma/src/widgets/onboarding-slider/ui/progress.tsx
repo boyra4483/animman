@@ -1,4 +1,4 @@
-import styles from "@animman/tma/widgets/onboarding-slider/ui/progress.scss";
+import styles from "@animman/tma/widgets/onboarding-slider/ui/progress.module.scss";
 
 interface OnboardingProgressProps {
 	step: number;

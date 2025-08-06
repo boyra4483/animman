@@ -1,4 +1,4 @@
-import styles from "@animman/tma/widgets/onboarding-slider/ui/slider.scss";
+import styles from "@animman/tma/widgets/onboarding-slider/ui/slider.module.scss";
 import OnboardingImage from "@animman/tma/widgets/onboarding-slider/ui/OnboardingImage";
 import OnboardingText from "@animman/tma/widgets/onboarding-slider/ui/OnboardingText";
 import Button from "@animman/tma/widgets/onboarding-slider/ui/Button";

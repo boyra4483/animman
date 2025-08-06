@@ -1,4 +1,4 @@
-import styles from "@animman/tma/widgets/onboarding-slider/ui/button.scss";
+import styles from "@animman/tma/widgets/onboarding-slider/ui/button.module.scss";
 import arrow from "@animman/tma/shared/assets/images/icons/arrow.svg";
 
 interface OnboardingButtonProps {
