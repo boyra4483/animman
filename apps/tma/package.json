@@ -38,6 +38,7 @@
   "dependencies": {
     "@animman/config": "workspace:*",
     "@animman/shared": "workspace:*",
+    "@telegram-apps/telegram-ui": "^2.1.9",
     "@twa-dev/sdk": "^8.0.2",
     "axios": "^1.9.0",
     "eruda": "^3.4.3",
