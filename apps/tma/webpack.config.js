@@ -41,7 +41,7 @@ export default env => {
 					type: "asset/resource"
 				},
 				{
-					test: /\.(scss|sass|css)$/i,
+					test: /\.module\.(s[ac]ss)$/i,
 					use: [
 						isDevMode ? "style-loader" : MiniCssExtractPlugin.loader,
 						{
@@ -61,6 +61,35 @@ export default env => {
 							}
 						},
 						"sass-loader"
+					]
+				},
+				{
+					test: /\.module\.css$/i,
+					use: [
+						isDevMode ? "style-loader" : MiniCssExtractPlugin.loader,
+						{
+							loader: "css-loader",
+							options: {
+								modules: {
+									mode: "local",
+									namedExport: false,
+									exportLocalsConvention: "as-is",
+									localIdentHashDigestLength: 10,
+									localIdentName: `${
+										isDevMode
+											? "[path][name]__[local]"
+											: "[local]__[hash:base64]"
+									}`
+								}
+							}
+						}
+					]
+				},
+				{
+					test: /\.css$/i,
+					use: [
+						isDevMode ? "style-loader" : MiniCssExtractPlugin.loader,
+						"css-loader"
 					]
 				},
 				{
