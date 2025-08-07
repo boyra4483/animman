@@ -41,7 +41,7 @@ export default env => {
 					type: "asset/resource"
 				},
 				{
-					test: /\.module\.(s[ac]ss)$/i,
+					test: /\.module\.s[ac]ss$/i,
 					use: [
 						isDevMode ? "style-loader" : MiniCssExtractPlugin.loader,
 						{
@@ -87,9 +87,19 @@ export default env => {
 				},
 				{
 					test: /\.css$/i,
+					exclude: /\.module\.css$/i,
 					use: [
 						isDevMode ? "style-loader" : MiniCssExtractPlugin.loader,
 						"css-loader"
+					]
+				},
+				{
+					test: /\.s[ac]ss$/i,
+					exclude: /\.module\.s[ac]ss$/i,
+					use: [
+						isDevMode ? "style-loader" : MiniCssExtractPlugin.loader,
+						"css-loader",
+						"sass-loader"
 					]
 				},
 				{
