@@ -1,5 +1,5 @@
 import { User as UserDB } from "@prisma/client";
 
-interface User {
+export default interface User {
 	userData: UserDB | null;
 }
