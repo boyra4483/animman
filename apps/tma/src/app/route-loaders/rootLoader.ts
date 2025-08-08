@@ -2,12 +2,12 @@ import tg from "@twa-dev/sdk";
 import { redirect } from "react-router";
 import isAuth from "@animman/tma/shared/config/axios/config/isAuth";
 import axios from "axios";
-import User from "@animman/shared/src/types/user";
+import isAuthRes from "@animman/shared/src/types/isAuthRes";
 
 export default async function rootLoader() {
 	console.log(tg.initData);
-	const user = await axios<any, User>(isAuth);
+	const res = await axios<any, isAuthRes>(isAuth);
 
-	if (user.userData !== null) return redirect("/auth");
+	if (res.user !== null) return redirect("/auth");
 	return redirect("/onboarding");
 }
