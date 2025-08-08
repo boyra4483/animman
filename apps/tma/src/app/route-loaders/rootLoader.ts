@@ -5,8 +5,9 @@ import axios from "axios";
 import isAuthRes from "@animman/shared/src/types/isAuthRes";
 
 export default async function rootLoader() {
-	console.log(tg.initData);
 	const res = await axios<any, isAuthRes>(isAuth);
+
+	console.log(res.user);
 
 	if (res.user !== null) return redirect("/auth");
 	return redirect("/onboarding");
