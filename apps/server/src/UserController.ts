@@ -81,7 +81,7 @@ class UserController {
 
 		console.log(userDB);
 		res.status(200).json({
-			userData: userDB
+			user: userDB
 		});
 	}
 }
