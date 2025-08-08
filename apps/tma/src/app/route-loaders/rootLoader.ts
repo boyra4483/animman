@@ -5,10 +5,11 @@ import axios from "axios";
 import isAuthRes from "@animman/shared/src/types/isAuthRes";
 
 export default async function rootLoader() {
-	const res = await axios<any, isAuthRes>(isAuth);
+	const res = await axios<isAuthRes>(isAuth);
 
-	console.log(res.user);
+	console.log(res.data);
+	console.log(tg.initData);
 
-	if (res.user !== null) return redirect("/auth");
+	if (res.data.user !== null) return redirect("/auth");
 	return redirect("/onboarding");
 }
