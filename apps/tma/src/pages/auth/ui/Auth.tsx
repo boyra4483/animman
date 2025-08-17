@@ -13,9 +13,11 @@ export default function Auth() {
 				Enter your details <br /> to Sign Up
 			</p>
 			<section className={styles["auth-methods"]}>
-				<Button width="100%" height="3.5rem" color="blue">
-					Sign Up
-				</Button>
+				<Link className={styles["sign-up-link"]} to={"/auth/register"}>
+					<Button width="100%" height="3.5rem" color="blue">
+						Sign Up
+					</Button>
+				</Link>
 				<p className={styles["login-text"]}>
 					I already have an account?{" "}
 					<Link className={styles["login-link"]} to={"/auth/login"}>
