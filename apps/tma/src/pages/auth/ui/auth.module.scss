@@ -61,16 +61,22 @@
 	align-items: center;
 }
 
-.auth-methods > div:first-child {
-	margin-block-end: 2.125rem;
+.sign-up-link {
+	display: block;
+	width: 100%;
 
-	@media (max-height: 40rem) {
-		height: 3rem !important;
-	}
+	margin-block-end: 2.125rem;
+	text-decoration: none;
+
+	color: inherit;
 
 	@media (max-height: 38rem) {
 		margin-block-end: 1.125rem;
 	}
+}
+
+.sign-up-link:visited {
+	color: inherit;
 }
 
 .login-text {
