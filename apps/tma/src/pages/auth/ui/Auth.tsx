@@ -10,18 +10,18 @@ export default function Auth() {
 			<img src={logo} alt="logo of animman" className={styles.logo} />
 			<h1 className={styles.title}>ANIMMAN</h1>
 			<p className={styles["reg-info"]}>
-				Enter your details <br /> to Sign Up
+				Введите свои данные, <br /> чтобы зарегистрироваться
 			</p>
 			<section className={styles["auth-methods"]}>
 				<Link className={styles["sign-up-link"]} to={"/auth/register"}>
 					<Button width="100%" height="3.5rem" color="blue">
-						Sign Up
+						Зарегистрироваться
 					</Button>
 				</Link>
 				<p className={styles["login-text"]}>
-					I already have an account?{" "}
+					Уже есть аккаунт?{" "}
 					<Link className={styles["login-link"]} to={"/auth/login"}>
-						Login
+						Войти
 					</Link>
 				</p>
 			</section>
