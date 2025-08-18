@@ -17,7 +17,8 @@ export default env => {
 			path: path.resolve(__dirname, "dist"),
 			filename: "[name]-[contenthash].js",
 			hashDigestLength: 10,
-			clean: true
+			clean: true,
+			publicPath: "/"
 		},
 		plugins: [].concat(
 			new HtmlWebpackPlugin({
@@ -128,7 +129,9 @@ export default env => {
 		devtool: "inline-source-map",
 		devServer: {
 			static: "./dist",
-			historyApiFallback: true
+			historyApiFallback: {
+				index: "/index.html"
+			}
 		},
 		stats: {
 			errorDetails: true
