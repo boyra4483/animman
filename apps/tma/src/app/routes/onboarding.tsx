@@ -1,5 +1,5 @@
 import { RouteObject } from "react-router";
-import Onboarding from "@animman/tma/pages/onboarding/ui/Onboarding";
+import Onboarding from "@animman/tma/pages/onboarding";
 
 const onboardingRoute: RouteObject = {
 	path: "/onboarding",
