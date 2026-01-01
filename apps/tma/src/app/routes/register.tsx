@@ -1,8 +1,9 @@
 import { RouteObject } from "react-router";
+import Register from "@animman/tma/pages/register/ui/Register";
 
 const registerRoute: RouteObject = {
 	path: "/auth/register",
-	element: <h1>register</h1>
+	element: <Register />
 };
 
 export default registerRoute;
