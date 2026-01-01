@@ -3,25 +3,25 @@
 @use "~@animman/tma/shared/styles/vars/colors";
 
 body {
-  background-color: colors.$primary-soft-dark;
-  font: 400 0.75rem / 1.25 "montserrat";
-  color: #ffffff;
+	background-color: colors.$primary-soft-dark;
+	font: 400 0.75rem / 1.25 "montserrat";
+	color: #ffffff;
 }
 
 h1,
 h2,
 h3 {
-  color: #ffffff;
+	color: #ffffff;
 }
 
 h1 {
-  font: 1.75rem / 1.22 "montserrat";
+	font: 1.75rem / 1.22 "montserrat";
 }
 
 h2 {
-  font: 1.5rem / 1.22 "montserrat";
+	font: 1.5rem / 1.22 "montserrat";
 }
 
 h3 {
-  font: 1.125rem / 1.22 "montserrat";
+	font: 1.125rem / 1.22 "montserrat";
 }
