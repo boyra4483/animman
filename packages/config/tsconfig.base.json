@@ -1,14 +1,13 @@
 {
 	"compilerOptions": {
 		"strict": true,
-		"baseUrl": ".",
 		"lib": ["DOM", "ESNext"],
 		"paths": {
-			"@animman/tma/*": ["apps/tma/src/*"],
-			"@animman/server/*": ["apps/server/src/*"],
-			"@animman/bot/*": ["apps/bot/src/*"],
-			"@animman/config/*": ["packages/config/src/*"],
-			"@animman/shared/*": ["packages/shared/src/*"]
+			"@animman/tma/*": ["../../apps/tma/src/*"],
+			"@animman/server/*": ["../../apps/server/src/*"],
+			"@animman/bot/*": ["../../apps/bot/src/*"],
+			"@animman/config/*": ["../../packages/config/src/*"],
+			"@animman/shared/*": ["../../packages/shared/src/*"]
 		},
 		"noImplicitAny": true,
 		"module": "esnext",
@@ -22,7 +21,5 @@
 		"forceConsistentCasingInFileNames": true,
 		"skipLibCheck": true,
 		"resolveJsonModule": true
-	},
-	"include": ["apps", "packages"],
-	"exclude": ["node_modules", "dist"]
+	}
 }
