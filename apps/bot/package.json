@@ -16,12 +16,12 @@
 	"dependencies": {
 		"@animman/config": "workspace:*",
 		"@animman/shared": "workspace:*",
-		"axios": "^1.13.2",
-		"grammy": "^1.39.2"
+		"axios": "^1.16.1",
+		"grammy": "^1.43.0"
 	},
 	"devDependencies": {
-		"@types/node": "^25.0.3",
-		"nodemon": "^3.1.11",
+		"@types/node": "^25.9.1",
+		"nodemon": "^3.1.14",
 		"ts-node": "^10.9.2",
 		"ts-node-dev": "^2.0.0",
 		"tsconfig-paths": "^4.2.0"
