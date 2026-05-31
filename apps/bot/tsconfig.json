@@ -3,6 +3,5 @@
 	"compilerOptions": {
 		"module": "nodenext",
 		"moduleResolution": "node16"
-	},
-	"include": ["src"]
+	}
 }
