@@ -1,7 +1,6 @@
 {
 	"compilerOptions": {
 		"strict": true,
-		"lib": ["DOM", "ESNext"],
 		"paths": {
 			"@animman/tma/*": ["../../apps/tma/src/*"],
 			"@animman/server/*": ["../../apps/server/src/*"],
@@ -10,11 +9,8 @@
 			"@animman/shared/*": ["../../packages/shared/src/*"]
 		},
 		"noImplicitAny": true,
-		"module": "esnext",
-		"target": "es2020",
 		"jsx": "react-jsx",
 		"allowJs": true,
-		"moduleResolution": "node",
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
 		"sourceMap": true,
