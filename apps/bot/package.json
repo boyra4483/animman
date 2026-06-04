@@ -6,7 +6,8 @@
 	"private": true,
 	"scripts": {
 		"dev": "tsnd --respawn -r tsconfig-paths/register src/index.ts",
-		"build": "tsc && node -r ts-node/register -r tsconfig-paths/register ./dist/src/index.js"
+		"build": "tsc",
+		"start": "node -r ts-node/register -r tsconfig-paths/register ./dist/src/index.js"
 	},
 	"keywords": [],
 	"author": "",
