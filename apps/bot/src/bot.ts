@@ -4,7 +4,7 @@ import { startCommand } from "@animman/bot/commands/start";
 import http from "http";
 
 const server = http.createServer((req, res) => {
-	return "server is working";
+	return res.writeHead(200).end();
 });
 
 server.listen(
