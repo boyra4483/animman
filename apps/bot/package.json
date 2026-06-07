@@ -14,8 +14,6 @@
 	"license": "ISC",
 	"packageManager": "pnpm@10.12.1",
 	"dependencies": {
-		"@animman/config": "workspace:*",
-		"@animman/shared": "workspace:*",
 		"axios": "^1.16.1",
 		"grammy": "^1.43.0"
 	},
